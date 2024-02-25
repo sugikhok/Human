@@ -2,8 +2,6 @@ package jp.teckacademy.kouji.kishimoto.kotlinlog
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
 import android.util.Log
 
 class MainActivity() : AppCompatActivity() {
@@ -12,18 +10,40 @@ class MainActivity() : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val human = Human("太郎", 16,"読書")
+        val human = Human("太郎", 16)
 
         human.say()
-        Log.d("kotlintest", "私の名前は" + human.name + "です。")
-        Log.d("kotlintest", "年は" + human.age + "歳です。")
 
 
+        val hobby = Human.Hobby("読書")
 
-        human.think()
+        hobby.think()
+
+
+        val str1 = "Hello"
+        val str2 = "World"
+        val str3 = "Hello"
+
+        if (str1.equals(str2)) {
+            Log.d("kotlintest", "str1とstr2は一緒です")
+        } else {
+            Log.d("kotlintest", "str1とstr2は異なります")
+        }
+
+
+        if (str1.equals(str3)) {
+            Log.d("kotlintest", "str1とstr3は一緒です")
+        } else {
+            Log.d("kotlintest", "str1とstr3は異なります")
+        }
+
+        val i = 100
+        val str = i.toString() + "*100=${i * 100}"
+        Log.d("kotlintest", str)
 
 
     }
-}
 
+
+}
 
