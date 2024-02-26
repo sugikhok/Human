@@ -1,6 +1,6 @@
 package jp.teckacademy.kouji.kishimoto.kotlinlog
 
-interface Thinkable{
+interface Thinkable {
 
     fun think()
 }

@@ -3,13 +3,16 @@ package jp.teckacademy.kouji.kishimoto.kotlinlog
 import android.util.Log
 
 
-open class Human : Animal {
+open class Human : Animal, Thinkable {
 
-    constructor(name: String, age: Int) : super(name, age)
+    var hobby:String
 
-    init {
-
+    constructor(name:String, age:Int,hobby:String) : super(name,age) {
+        this.name = name
+        this.age = age
+        this.hobby=hobby
     }
+
 
     override fun say() {
 
@@ -17,22 +20,21 @@ open class Human : Animal {
         Log.d("kotlintest", "年は" + age + "歳です。")
     }
 
-    open class Hobby : Thinkable {
-
-        var hobby: String = ""
-
-        constructor(hobby: String){
-            this.hobby= hobby
-
-        }
 
 
         override fun think() {
-            Log.d("kotlintest", "私は" + hobby + "について考える。")
+            Log.d("kotlintest", "私は" + this.hobby + "について考える。")
 
         }
     }
-}
+
+
+
+
+
+
+
+
 
 
 

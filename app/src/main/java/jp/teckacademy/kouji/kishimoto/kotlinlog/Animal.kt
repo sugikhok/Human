@@ -9,7 +9,7 @@ abstract class Animal {
         this.age = age
     }
 
-        abstract  fun say()
 
 
+    abstract fun say()
 }
